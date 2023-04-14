@@ -1,4 +1,3 @@
-package lab01;
 import java.util.Scanner;
 public class Answer_2_2_5{
     public static void main(String[] args){

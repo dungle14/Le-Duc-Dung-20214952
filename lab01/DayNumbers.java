@@ -1,4 +1,3 @@
-package lab01;
 import java.util.Scanner;
 public class DayNumbers{
     public static void main (String[] args){
