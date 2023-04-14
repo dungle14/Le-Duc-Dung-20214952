@@ -1,11 +1,11 @@
 package lab01;
-import.java.util.Scanner;
+import java.util.Scanner;
 public class Answer_2_2_5{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("What is your first number?");
+        System.out.println("What is your first number?");
         double num1 = scanner.nextDouble();
-        System.out.print("What is your second number?");
+        System.out.println("What is your second number?");
         double num2 = scanner.nextDouble();
         double sum = num1 + num2;
         double diff = num1 - num2;
