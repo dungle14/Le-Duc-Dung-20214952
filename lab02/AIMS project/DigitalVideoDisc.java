@@ -44,6 +44,6 @@ public class DigitalVideoDisc {
         this.director = director;
         this.cost = cost;
     }
-    private static int nbDigitalVideoDiscs = 0;
+    
     
 }
