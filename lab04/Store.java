@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class Store {
     private ArrayList<Media> itemsInStore = new ArrayList<>();
-    public int getQty(){
+
+    public int getQty() {
         return this.itemsInStore.size();
     }
 
@@ -35,14 +36,13 @@ public class Store {
     public ArrayList<Media> getItemsInStore() {
         return itemsInStore;
     }
-    public static void main(String[] args){
-        Store store = new Store();
-        Media med1 = new Disc();
-        Media med2 = new Disc();
-        store.addMedia(med1);
-        store.addMedia(med2);
-        store.removeMedia(med2);
-        System.out.println(store.getQty());
 
+    public Media search(String title) {
+        for (Media media : itemsInStore) {
+            if (media.getTitle().equals(title)) {
+                return media;
+            }
+        }
+        return null;
     }
 }
