@@ -104,94 +104,11 @@ public class CartScreenController {
 	}
 	
 	@FXML
-	void addBook(ActionEvent event) {
-		try {
-	        // Load the AddDVD.fxml file
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("AddDVD.fxml"));
-	        Parent root = loader.load();
-	        AddDigitalVideoToStoreScreen controller = loader.getController();
-	        
-	        // Create a new dialog for the form screen
-	        Stage dialog = new Stage();
-	        dialog.initModality(Modality.APPLICATION_MODAL);
-	        dialog.setTitle("Add DVD");
-	        dialog.setScene(new Scene(root));
-	        
-	        // Show the dialog and wait for the user to close it
-	        dialog.showAndWait();
-	        
-	        // Get the input values from the controller
-	        String title = controller.getTitle();
-	        String category = controller.getCategory();
-	        String director = controller.getDirector();
-	        int length = controller.getLength();
-	        float cost = controller.getCost();
-	        
-	        // Validate the input and add the DVD to the cart if valid
-	        if (controller.validateInput()) {
-	            Book dvd = new Book(title, category, director, cost);
-	            cart.addMedia(dvd);
-	        } else {
-	            // Show an error message if the input is not valid
-	            Alert alert = new Alert(AlertType.ERROR);
-	            alert.setTitle("Invalid Input");
-	            alert.setHeaderText(null);
-	            alert.setContentText("Please enter valid values for all fields.");
-	            alert.showAndWait();
-	            
-	            // Clear the input fields
-	            controller.clearFields();
-	        }
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-	    updateTotalCost();
-	}
+	void addBook(ActionEvent event) {}
+
 	
 	@FXML
-	void addCD(ActionEvent event){
-		try {
-	        // Load the AddDVD.fxml file
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("AddDVD.fxml"));
-	        Parent root = loader.load();
-	        AddDigitalVideoToStoreScreen controller = loader.getController();
-	        
-	        // Create a new dialog for the form screen
-	        Stage dialog = new Stage();
-	        dialog.initModality(Modality.APPLICATION_MODAL);
-	        dialog.setTitle("Add DVD");
-	        dialog.setScene(new Scene(root));
-	        
-	        // Show the dialog and wait for the user to close it
-	        dialog.showAndWait();
-	        
-	        // Get the input values from the controller
-	        String title = controller.getTitle();
-	        String category = controller.getCategory();
-	        String director = controller.getDirector();
-	        int length = controller.getLength();
-	        float cost = controller.getCost();
-	        
-	        // Validate the input and add the DVD to the cart if valid
-	        if (controller.validateInput()) {
-	            DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length,cost);
-	            cart.addMedia(dvd);
-	        } else {
-	            // Show an error message if the input is not valid
-	            Alert alert = new Alert(AlertType.ERROR);
-	            alert.setTitle("Invalid Input");
-	            alert.setHeaderText(null);
-	            alert.setContentText("Please enter valid values for all fields.");
-	            alert.showAndWait();
-	            
-	            // Clear the input fields
-	            controller.clearFields();
-	        }
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-	    updateTotalCost();
-	}
+	void addCD(ActionEvent event){}
 	
 	@FXML
 	void addDVD(ActionEvent event) {
